@@ -1,0 +1,6 @@
+
+# Generated dependencies and local build output
+node_modules/
+frontend/node_modules/
+frontend/build/
+__pycache__/
