@@ -1,4 +1,4 @@
-# Therapy Appointment Scheduler – Full Stack
+# TheraSync — Therapy Appointment Scheduler
 
 ## TheraSync — 60-second demo
 
@@ -51,8 +51,7 @@ The Therapy Appointment Scheduler is a robust, user-friendly web app for clinics
 
 ## Screenshots
 
-Store all screenshots in the `images/` folder.
-Replace the placeholders below with your actual screenshots and descriptions.
+Screenshots below describe the main role-based workflows.
 
 ### 1. Therapist: Availability Setting Page
 
@@ -79,7 +78,7 @@ Replace the placeholders below with your actual screenshots and descriptions.
 ![Student Dashboard](images/student_dashboard.png)
 *Students view and manage their upcoming therapy sessions.*
 
-*(Add or rename screenshots as needed. Update file paths as you add more.)*
+
 
 ---
 
@@ -216,8 +215,8 @@ GROUP_PROJECT/
 First, clone the repository from GitHub to your local machine:
 
 ```bash
-git clone https://github.com/nubpz/Group4.git
-cd Group4
+git clone https://github.com/fatinm1/Therapy-Scheduling.git
+cd Therapy-Scheduling
 ```
 
 ### Prerequisites
@@ -515,3 +514,11 @@ npm start
 This project is open source for educational use.
 
 ---
+
+## Project scope and engineering limitations
+
+This was a collaborative academic project. Use repository history and the team credits to understand authorship; the fork does not imply sole ownership. The backend implements scheduling, relational data access, JWT authentication, and role-specific workflows.
+
+Install frontend dependencies from the lockfile with `npm ci`; generated node_modules are intentionally ignored. Before using real data, validate per-role authorization and simultaneous booking behavior against a disposable MySQL database. The original frontend starter test is not evidence of scheduling correctness. Public demos must contain synthetic users only.
+
+Database configuration is read from DB_HOST, DB_PORT, DB_NAME, DB_USER, and DB_PASSWORD. Production (FLASK_ENV=production) requires DB_PASSWORD and a unique JWT_SECRET_KEY of at least 32 characters. Development generates a per-process secret if none is set; sessions then expire on restart. Run `cd backend && python -m pytest tests -q` for offline configuration checks. These do not replace booking/permission integration tests.

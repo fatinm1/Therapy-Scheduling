@@ -29,19 +29,16 @@ CORS(app)
 
 
 # Configure MySQL database connection
-db_config = {
-    'host': 'localhost',
-    'user': 'root',               
-    'password': 'University24@',   
-    'database': 'therapy_clinic',  
-    'port': 3306
-}
+from settings import load_settings
+settings = load_settings()
+db_config = settings["database"]
+
 
 def get_db_connection():
     return mysql.connector.connect(**db_config)
 
 # Configure JWT and Bcrypt
-app.config["JWT_SECRET_KEY"] = "your-secret-key"
+app.config["JWT_SECRET_KEY"] = settings["jwt_secret"]
 jwt = JWTManager(app)
 bcrypt = Bcrypt(app)
 
