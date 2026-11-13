@@ -1,5 +1,14 @@
 # Therapy Appointment Scheduler – Full Stack
 
+## TheraSync — 60-second demo
+
+Development demo of appointment booking, therapist availability, role-based dashboards, and email notifications. TheraSync is not currently deployed.
+
+
+
+https://github.com/user-attachments/assets/ad734257-3aa1-40c4-9f8a-e9261b54701f
+
+
 ## Table of Contents
 
 * [Project Overview](#project-overview)
